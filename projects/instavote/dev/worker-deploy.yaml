@@ -10,10 +10,12 @@ spec:
     rollingUpdate:
       maxSurge: 1
       maxUnavailable: 1
+  revisionHistoryLimit: 4
+  paused: false
   minReadySeconds: 20
   selector:
     matchLabels:
-     role: vote
+     role: worker
     matchExpressions:
      - {key: version, operator: In, values: [v1, v2, v3, latest]}
 
