@@ -7,9 +7,11 @@ metadata:
 spec:
   selector:
     role: vote
-    version: v1
   ports:
     - port: 80
       targetPort: 80
-      nodePort: 30000
   type: NodePort
+  externalIPs:
+    - 34.66.154.85
+    - 35.238.52.10
+ 
