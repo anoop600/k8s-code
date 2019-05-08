@@ -7,7 +7,6 @@ metadata:
 spec:
   selector:
     role: vote
-    version: v1
   ports:
     - port: 80
       targetPort: 80
