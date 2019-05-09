@@ -18,7 +18,6 @@ spec:
      role: worker
     matchExpressions:
      - {key: version, operator: In, values: [v1, v2, v3, latest]}
-
   template:
     metadata:
       name: worker

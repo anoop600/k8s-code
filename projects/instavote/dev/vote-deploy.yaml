@@ -2,7 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: vote
+  namespace: instavote
 spec:
+  replicas: 5
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -10,7 +12,6 @@ spec:
       maxUnavailable: 1
   revisionHistoryLimit: 4
   paused: false
-  replicas: 8
   minReadySeconds: 20
   selector:
     matchLabels:

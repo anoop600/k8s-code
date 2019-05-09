@@ -8,10 +8,7 @@ spec:
   selector:
     role: results
   ports:
-    - port: 81
+    - port: 80
       targetPort: 80
       nodePort: 30010
-  type: NodePort
-  externalIPs:
-    - 34.66.154.85
-    - 35.238.52.10
+  type: LoadBalancer
